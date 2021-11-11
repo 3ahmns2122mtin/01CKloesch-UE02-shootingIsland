@@ -1,20 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject target;
     public GameObject parentOfTargets;
+    public GameObject objCounter;
 
+    private Text textCounter;
     public bool won;
-    public int scoreNew;
+    public int score;
 
     void Start()
     {
+        textCounter = objCounter.GetComponent<Text>();
         won = false;
         InvokeRepeating("Spawn", 1f, 2f);
-        scoreNew = 0;
+        
 
     }
 
@@ -56,12 +60,14 @@ public class GameManager : MonoBehaviour
 }
     public void IncrementScore()
     {
-        scoreNew++;
-        Debug.Log("increment ..." + scoreNew);
+        score++;
+        Debug.Log("increment ..." + score);
+        textCounter.text = score.ToString();
 
-        if(scoreNew > 10)
+        if(score == 10)
         {
             won = true;
+            
         }
     }
 }
