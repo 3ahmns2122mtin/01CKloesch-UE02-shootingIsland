@@ -19,7 +19,12 @@ Screenshots (Konzept, Spielabschnitte), Video (< 100MB, < 3 min)
 z.B.: Installationsprozess, Schritt für Schritt Anweisung, spezielles Packages welches geladen werden muss, etc.  
 
 ### Drittmaterial: 
-Falls verwendet Fonts, Sounds, Music, Graphics, Materials, Code etc. welches nicht von mir stammt muss hier referenziert werden. 
+Minecraft Font
+Minecraft Hit Sound
+Minecraft Pop Sound
+Minecraft Background
+Minecraft Spider
+Minecraft Diamond Sword
 
 ### Anforderungsliste:    
 - [x] WebGL export/upload lauffähig/spielbar
@@ -53,7 +58,8 @@ das GameObject Main Camera per Drag & Drop auf Render Camera ziehen in der Kompo
 - [x] In der Szene ein empty GameObject anlegen, umbenennen in GameManager und Reset ausführen. 
 - [x] Im Scripts Ordner ein neues C# Script erstellen mit dem Namen GameManager.
 - [x] Das GameManager Script per Drag and Drop dem GameObject GameManager hinzufügen.
-- [ ] ... (noch unvollständig)
+- [ ] Projekt aufhübschen, neues DeathTarget hinzufügen, neuer Sound hinzufügen, neuer Hintergrund und neue Sprites für Targets verwenden
+
 
 ### Limitationen:
 Bitte hier nicht, ich kann nicht programmieren, sondern was wurde im Projekt von den Anforderungen nicht umgesetz. Wo waren die Probleme. 
