@@ -3,13 +3,16 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    private const int maxHit = 10;
     public GameObject target;
     public GameObject parentOfTargets;
     public GameObject objCounter;
     public GameObject wonObj;
     public GameObject shootSound;
+    public GameObject hitSound;
+    public GameObject deathTarget;
+    public GameObject parentOfDeathTargets;
 
+    private const int maxHit = 10;
     private Text textCounter;
     private bool won;
     private int score;
@@ -19,6 +22,7 @@ public class GameManager : MonoBehaviour
         textCounter = objCounter.GetComponent<Text>();
         won = false;
         InvokeRepeating("Spawn", 1f, 2f);
+        InvokeRepeating("DeathSpawn", 3f, 7f);
         wonObj.SetActive(false);
     }
 
@@ -32,10 +36,25 @@ public class GameManager : MonoBehaviour
         float randomX = Random.Range(-370, 370);
         float randomY = Random.Range(-197, 197);
 
+
         Vector2 random2DPosition = new Vector2(randomX, randomY);
+        
 
         GameObject myTarget = Instantiate(target, parentOfTargets.transform);
         myTarget.transform.localPosition = random2DPosition;
+
+        
+    }
+
+    private void DeathSpawn()
+    {
+        float randomXX = Random.Range(-375, 375);
+        float randomYY = Random.Range(-180, 180);
+
+        Vector2 random2DPositionTwo = new Vector2(randomXX, randomYY);
+
+        GameObject myDeathTarget = Instantiate(deathTarget, parentOfDeathTargets.transform);
+        myDeathTarget.transform.localPosition = random2DPositionTwo;
     }
 
     // Update is called once per frame
@@ -44,6 +63,7 @@ public class GameManager : MonoBehaviour
        if(won == true)
         {
             CancelInvoke("Spawn");
+            CancelInvoke("DeathSpawn");
             wonObj.SetActive(true);
         }
        else
@@ -51,12 +71,7 @@ public class GameManager : MonoBehaviour
             Debug.Log(won);
         }
 
-        if (Input.GetMouseButtonDown(0)) 
-        {
-            Debug.Log("Mouse pressed");
-            shootSound.GetComponent<AudioSource>().Play();
-
-        }
+        
 
         
 }
@@ -70,6 +85,26 @@ public class GameManager : MonoBehaviour
         {
             won = true;
             
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("Mouse pressed");
+            shootSound.GetComponent<AudioSource>().Play();
+
+        }
+    }
+
+    public void DecrementScore()
+    {
+        score--;
+        Debug.Log("decrement ..." + score);
+        textCounter.text = score.ToString();
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("Mouse pressed");
+            hitSound.GetComponent<AudioSource>().Play();
+
         }
     }
 }
