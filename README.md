@@ -18,12 +18,12 @@ https://3ahmns2122mtin.github.io/01CKloesch-UE02-shootingIsland/
 z.B.: Installationsprozess, Schritt für Schritt Anweisung, spezielles Packages welches geladen werden muss, etc.  
 
 ### Drittmaterial: 
-Minecraft Font
-Minecraft Hit Sound
-Minecraft Pop Sound
-Minecraft Background
-Minecraft Spider
-Minecraft Diamond Sword
+Minecraft Font, 
+Minecraft Hit Sound, 
+Minecraft Pop Sound, 
+Minecraft Background, 
+Minecraft Spider, 
+Minecraft Diamond Sword;
 
 ### Anforderungsliste:    
 - [x] WebGL export/upload lauffähig/spielbar
