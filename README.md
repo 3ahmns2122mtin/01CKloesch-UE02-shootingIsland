@@ -2,18 +2,17 @@
 UE2 ShootingIsland
 
 ### Projektbeschreibung: 
-Einführung in / Zusammenfassung des Projektes. 
+Es geht darum, ein funktionierendes Spiel namens Shooting Island zu gestalten. Ziel ist es, mit dem Cursor zehn sword-Targets zu treffen. Die spider-Targets sollten vermieden werden, da sie einem wieder Punkte abziehen.
 
 ### Entwicklungsplattform: 
-(Betriebsystem, Unity Version, Visual Studio Version, verwendete SDKs)
+Unity 2020.3.18f1, Visual Studios 2019
 
 ### Zielplattform: 
 WebGL Referenzauflösung (960x600) 
-https://3ahmns2122mtin.github.io/01CKloesch-UE02-shootingIsland/
 
 
 ### Visuelle Einblicke in das Projekt: 
-Screenshots (Konzept, Spielabschnitte), Video (< 100MB, < 3 min)
+https://3ahmns2122mtin.github.io/01CKloesch-UE02-shootingIsland/
 
 ### Notwendiges für die Ausführung: 
 z.B.: Installationsprozess, Schritt für Schritt Anweisung, spezielles Packages welches geladen werden muss, etc.  
@@ -58,17 +57,19 @@ das GameObject Main Camera per Drag & Drop auf Render Camera ziehen in der Kompo
 - [x] In der Szene ein empty GameObject anlegen, umbenennen in GameManager und Reset ausführen. 
 - [x] Im Scripts Ordner ein neues C# Script erstellen mit dem Namen GameManager.
 - [x] Das GameManager Script per Drag and Drop dem GameObject GameManager hinzufügen.
-- [ ] Projekt aufhübschen, neues DeathTarget hinzufügen, neuer Sound hinzufügen, neuer Hintergrund und neue Sprites für Targets verwenden
+- [x] Projekt aufhübschen, neues DeathTarget hinzufügen, neuer Sound hinzufügen, neuer Hintergrund und neue Sprites für Targets verwenden
 
 
 ### Limitationen:
 Bitte hier nicht, ich kann nicht programmieren, sondern was wurde im Projekt von den Anforderungen nicht umgesetz. Wo waren die Probleme. 
 
 ### Lessons Learned:
-- [ ] Saturn
-- [ ] Uranus
-- [ ] Neptune
-- [ ] Comet Haley
+- [x] arbeiten mit Spawn Methode
+- [x] Cursor Look verändern
+- [x] Counter Variable verwenden
+- [x] weiter mit UI Elementen arbeiten
+- [x] arbeiten mit Sound/Hintergrundmusik
+
 
 Copyright by CKloesch :)
 
